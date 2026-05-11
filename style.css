@@ -1,0 +1,152 @@
+/* RESET */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+/* BODY */
+
+body{
+    background:#111;
+    color:white;
+    font-family:'Smythe', serif;
+    overflow-x:hidden;
+}
+
+/* HERO */
+
+.hero{
+    height:50vh;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+
+    animation:fadeIn 1.5s ease;
+}
+
+.hero h1{
+    font-size:5rem;
+    font-family:'Jersey 10 Charted', sans-serif;
+    letter-spacing:4px;
+}
+
+.hero p{
+    margin-top:20px;
+    font-size:1.4rem;
+}
+
+/* CARDS */
+
+.cards{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:30px;
+
+    padding:50px;
+}
+
+.card{
+    height:300px;
+
+    border-radius:25px;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    text-decoration:none;
+    color:white;
+
+    transition:0.4s;
+
+    position:relative;
+
+    overflow:hidden;
+
+    box-shadow:0 10px 30px rgba(0,0,0,0.4);
+}
+
+.card h2{
+    font-size:3rem;
+    z-index:2;
+    font-family:'Jersey 10 Charted', sans-serif;
+}
+
+/* EFECTOS */
+
+.card:hover{
+    transform:scale(1.05);
+}
+
+.card::before{
+    content:"";
+
+    position:absolute;
+
+    width:100%;
+    height:100%;
+
+    background:rgba(0,0,0,0.3);
+
+    transition:0.4s;
+}
+
+.card:hover::before{
+    background:rgba(0,0,0,0.1);
+}
+
+/* COLORES */
+
+.elegante{
+    background:url('https://images.unsplash.com/photo-1496747611176-843222e1e57c?q=80&w=1200') center/cover;
+}
+
+.casual{
+    background:url('https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?q=80&w=1200') center/cover;
+}
+
+.streetwear{
+    background:url('https://images.unsplash.com/photo-1529139574466-a303027c1d8b?q=80&w=1200') center/cover;
+}
+
+.deportivo{
+    background:url('https://images.unsplash.com/photo-1517836357463-d25dfeac3438?q=80&w=1200') center/cover;
+}
+
+.bohemio{
+    background:url('https://images.unsplash.com/photo-1512436991641-6745cdb1723f?q=80&w=1200') center/cover;
+}
+
+/* ANIMACIÓN */
+
+@keyframes fadeIn{
+
+    from{
+        opacity:0;
+        transform:translateY(30px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+
+}
+
+/* RESPONSIVE */
+
+@media(max-width:768px){
+
+    .hero h1{
+        font-size:3rem;
+    }
+
+    .card h2{
+        font-size:2rem;
+    }
+
+}

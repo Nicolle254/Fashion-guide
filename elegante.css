@@ -1,0 +1,253 @@
+/* RESET */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+/* BODY */
+
+body{
+
+    background:linear-gradient(135deg,#0f0f0f,#1d1d1d);
+
+    color:white;
+
+    font-family:'Smythe', serif;
+
+    animation:fadeIn 1.2s ease;
+
+}
+
+/* CONTENEDOR */
+
+.container{
+
+    width:90%;
+
+    max-width:1200px;
+
+    margin:auto;
+
+    padding:50px 0;
+
+}
+
+/* TÍTULO */
+
+h1{
+
+    text-align:center;
+
+    font-size:6rem;
+
+    margin-bottom:25px;
+
+    letter-spacing:4px;
+
+    font-family:'Jersey 10 Charted', sans-serif;
+
+}
+
+/* DESCRIPCIÓN */
+
+.descripcion{
+
+    text-align:center;
+
+    max-width:800px;
+
+    margin:auto;
+
+    font-size:1.5rem;
+
+    line-height:1.8;
+
+    margin-bottom:50px;
+
+}
+
+/* SECCIÓN USAR */
+
+.usar{
+
+    background:rgba(255,255,255,0.08);
+
+    padding:35px;
+
+    border-radius:25px;
+
+    margin-bottom:60px;
+
+    backdrop-filter:blur(10px);
+
+    box-shadow:0 10px 25px rgba(0,0,0,0.4);
+
+}
+
+.usar h2{
+
+    margin-bottom:20px;
+
+    font-size:2.5rem;
+
+    font-family:'Jersey 10 Charted', sans-serif;
+
+}
+
+.usar ul{
+
+    list-style:none;
+
+}
+
+.usar li{
+
+    margin:15px 0;
+
+    font-size:1.3rem;
+
+}
+
+/* GALERÍA */
+
+.gallery h2{
+
+    text-align:center;
+
+    margin-bottom:30px;
+
+    font-size:2.5rem;
+
+    font-family:'Jersey 10 Charted', sans-serif;
+
+}
+
+/* GRID */
+
+.grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+
+    gap:25px;
+
+}
+
+/* IMÁGENES */
+
+.grid img{
+
+    width:100%;
+
+    height:420px;
+
+    object-fit:cover;
+
+    border-radius:25px;
+
+    transition:0.5s;
+
+    box-shadow:0 10px 20px rgba(0,0,0,0.5);
+
+}
+
+/* HOVER */
+
+.grid img:hover{
+
+    transform:scale(1.05);
+
+}
+
+/* BOTONES */
+
+.buttons{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    margin-top:60px;
+
+}
+
+/* LINKS */
+
+.buttons a{
+
+    padding:15px 30px;
+
+    background:white;
+
+    color:black;
+
+    text-decoration:none;
+
+    border-radius:40px;
+
+    transition:0.4s;
+
+    font-size:1.2rem;
+
+}
+
+/* HOVER BOTONES */
+
+.buttons a:hover{
+
+    background:#d4af37;
+
+    transform:translateY(-5px);
+
+}
+
+/* ANIMACIÓN */
+
+@keyframes fadeIn{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(30px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
+
+/* RESPONSIVE */
+
+@media(max-width:768px){
+
+    h1{
+
+        font-size:3.5rem;
+
+    }
+
+    .descripcion{
+
+        font-size:1.2rem;
+
+    }
+
+    .buttons{
+
+        flex-direction:column;
+
+        gap:20px;
+
+    }
+
+}
