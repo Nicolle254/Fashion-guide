@@ -29,6 +29,14 @@
 
     <div class="gif-fondo"></div>
 
+    <!-- MÚSICA DE FONDO -->
+
+    <audio loop id="musica">
+        <source src="music/latch.mp3" type="audio/mpeg">
+    </audio>
+
+    <button onclick="toggleMusica()" id="btnMusica">🎵</button>
+
     <!-- HERO -->
 
     <section class="hero">
@@ -117,6 +125,22 @@
         </a>
 
     </section>
+
+    <!-- SCRIPT -->
+
+    <script>
+        function toggleMusica() {
+            const audio = document.getElementById('musica');
+            const btn = document.getElementById('btnMusica');
+            if (audio.paused) {
+                audio.play();
+                btn.textContent = '🔇';
+            } else {
+                audio.pause();
+                btn.textContent = '🎵';
+            }
+        }
+    </script>
 
 </body>
 
