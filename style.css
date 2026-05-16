@@ -13,6 +13,34 @@ body{
     color:white;
     font-family:'Smythe', serif;
     overflow-x:hidden;
+    position:relative;
+}
+
+/* GIF DE FONDO */
+
+.gif-fondo{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+
+    background-image:url("images/runway.gif");
+    background-size:cover;
+    background-position:center;
+    background-repeat:no-repeat;
+
+    z-index:-2;
+}
+
+/* CAPA OSCURA */
+
+.gif-fondo::after{
+    content:"";
+    position:absolute;
+    width:100%;
+    height:100%;
+    background:rgba(0,0,0,0.45);
 }
 
 /* HERO */
@@ -70,6 +98,23 @@ body{
     box-shadow:0 10px 30px rgba(0,0,0,0.4);
 }
 
+.card img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+
+    position:absolute;
+    top:0;
+    left:0;
+}
+
+/* OVERLAY */
+
+.overlay{
+    position:relative;
+    z-index:2;
+}
+
 .card h2{
     font-size:3rem;
     z-index:2;
@@ -93,32 +138,12 @@ body{
     background:rgba(0,0,0,0.3);
 
     transition:0.4s;
+
+    z-index:1;
 }
 
 .card:hover::before{
     background:rgba(0,0,0,0.1);
-}
-
-/* COLORES */
-
-.elegante{
-    background:url('https://images.unsplash.com/photo-1496747611176-843222e1e57c?q=80&w=1200') center/cover;
-}
-
-.casual{
-    background:url('https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?q=80&w=1200') center/cover;
-}
-
-.streetwear{
-    background:url('https://images.unsplash.com/photo-1529139574466-a303027c1d8b?q=80&w=1200') center/cover;
-}
-
-.deportivo{
-    background:url('https://images.unsplash.com/photo-1517836357463-d25dfeac3438?q=80&w=1200') center/cover;
-}
-
-.bohemio{
-    background:url('https://images.unsplash.com/photo-1512436991641-6745cdb1723f?q=80&w=1200') center/cover;
 }
 
 /* ANIMACIÓN */
